@@ -384,6 +384,7 @@ export class _Blank extends React.Component {
                           }}
                           style={{
                             width: "100%",
+                            height: 11,
                             marginLeft: 0,
                             marginRight: 0,
                             marginTop: 5,
@@ -414,7 +415,7 @@ export class _Blank extends React.Component {
                           }}
                           onPress={() => alert("Pressed!")}
                         >
-                          Press me!
+                          Back
                         </Button>
                       </View>
                       <View
@@ -491,7 +492,7 @@ export class _Blank extends React.Component {
                           }}
                           onPress={() => alert("Pressed!")}
                         >
-                          Press me!
+                          Settings
                         </Button>
                       </View>
                     </View>
@@ -542,7 +543,7 @@ export class _Blank extends React.Component {
                         paddingTop: 5,
                         paddingBottom: 5,
                         overflow: "visible",
-                        textAlign: "left",
+                        textAlign: "center",
                         verticalAlign: "baseline",
                         fontSize: 12,
                         color: "#000000",
@@ -562,7 +563,7 @@ export class _Blank extends React.Component {
                         letterSpacing: 0
                       }}
                     >
-                      Sample text content
+                      My Weather App
                     </Text>
                   </View>
                 </View>
@@ -641,7 +642,7 @@ export class _Blank extends React.Component {
                   }}
                   onPress={() => alert("Pressed!")}
                 >
-                  Press me!
+                  Dallas
                 </Button>
               </View>
             </View>
@@ -790,7 +791,7 @@ export class _Blank extends React.Component {
                   }}
                   onPress={() => alert("Pressed!")}
                 >
-                  Press me!
+                  St. Louis
                 </Button>
               </View>
               <View
@@ -867,7 +868,7 @@ export class _Blank extends React.Component {
                   }}
                   onPress={() => alert("Pressed!")}
                 >
-                  Press me!
+                  Minneapolis
                 </Button>
               </View>
             </View>
