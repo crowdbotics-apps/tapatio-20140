@@ -7,28 +7,52 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('weatherapp', '0001_initial'),
+        ("weatherapp", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='locations',
-            name='humidity',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='locations_humidity', to='weatherapp.Humidity'),
+            model_name="locations",
+            name="humidity",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="locations_humidity",
+                to="weatherapp.Humidity",
+            ),
         ),
         migrations.AddField(
-            model_name='locations',
-            name='temperature',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='locations_temperature', to='weatherapp.Temperature'),
+            model_name="locations",
+            name="temperature",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="locations_temperature",
+                to="weatherapp.Temperature",
+            ),
         ),
         migrations.AddField(
-            model_name='locations',
-            name='wind',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='locations_wind', to='weatherapp.Wind'),
+            model_name="locations",
+            name="wind",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="locations_wind",
+                to="weatherapp.Wind",
+            ),
         ),
         migrations.AlterField(
-            model_name='locations',
-            name='name',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='locations_name', to='weatherapp.Name'),
+            model_name="locations",
+            name="name",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="locations_name",
+                to="weatherapp.Name",
+            ),
         ),
     ]
