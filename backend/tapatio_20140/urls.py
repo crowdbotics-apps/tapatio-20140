@@ -32,6 +32,7 @@ urlpatterns = [
     path("rest-auth/registration/", include("rest_auth.registration.urls")),
     path("home/", include("home.urls")),
     path("api/v1/", include("weatherapp.api.v1.urls")),
+    path("weatherapp/", include("weatherapp.urls")),
 ]
 
 admin.site.site_header = "Tapatio"

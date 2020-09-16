@@ -14,8 +14,33 @@ class Temperature(models.Model):
 
 class Locations(models.Model):
     "Generated Model"
-    name = models.CharField(
-        max_length=256,
+    humidity = models.ForeignKey(
+        "weatherapp.Humidity",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="locations_humidity",
+    )
+    temperature = models.ForeignKey(
+        "weatherapp.Temperature",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="locations_temperature",
+    )
+    wind = models.ForeignKey(
+        "weatherapp.Wind",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="locations_wind",
+    )
+    name = models.ForeignKey(
+        "weatherapp.Name",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="locations_name",
     )
 
 
