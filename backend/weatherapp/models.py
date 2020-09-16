@@ -42,6 +42,11 @@ class Locations(models.Model):
         on_delete=models.CASCADE,
         related_name="locations_name",
     )
+    cloudiness = models.CharField(
+        max_length=256,
+        null=True,
+        blank=True,
+    )
 
 
 class Humidity(models.Model):
