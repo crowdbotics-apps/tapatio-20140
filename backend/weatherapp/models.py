@@ -43,9 +43,9 @@ class Locations(models.Model):
         related_name="locations_name",
     )
     cloudiness = models.CharField(
-        max_length=256,
         null=True,
         blank=True,
+        max_length=256,
     )
 
 
