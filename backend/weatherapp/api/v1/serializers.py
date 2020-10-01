@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from weatherapp.models import Humidity, Locations, Name, Temperature, Wind
+from weatherapp.models import Cloudiness, Humidity, Locations, Name, Temperature, Wind
 
 
 class TemperatureSerializer(serializers.ModelSerializer):
@@ -29,4 +29,10 @@ class NameSerializer(serializers.ModelSerializer):
 class WindSerializer(serializers.ModelSerializer):
     class Meta:
         model = Wind
+        fields = "__all__"
+
+
+class CloudinessSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Cloudiness
         fields = "__all__"

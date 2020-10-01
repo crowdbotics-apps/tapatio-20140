@@ -42,10 +42,12 @@ class Locations(models.Model):
         on_delete=models.CASCADE,
         related_name="locations_name",
     )
-    cloudiness = models.CharField(
+    cloudiness = models.ForeignKey(
+        "weatherapp.Cloudiness",
+        on_delete=models.CASCADE,
         null=True,
         blank=True,
-        max_length=256,
+        related_name="locations_cloudiness",
     )
 
 
@@ -75,6 +77,16 @@ class Name(models.Model):
 class Wind(models.Model):
     "Generated Model"
     wind_speed = models.CharField(
+        max_length=256,
+    )
+
+
+class Cloudiness(models.Model):
+    "Generated Model"
+    minimum = models.CharField(
+        max_length=256,
+    )
+    maximum = models.CharField(
         max_length=256,
     )
 

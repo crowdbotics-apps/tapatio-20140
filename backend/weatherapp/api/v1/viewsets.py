@@ -1,6 +1,7 @@
 from rest_framework import authentication
-from weatherapp.models import Humidity, Locations, Name, Temperature, Wind
+from weatherapp.models import Cloudiness, Humidity, Locations, Name, Temperature, Wind
 from .serializers import (
+    CloudinessSerializer,
     HumiditySerializer,
     LocationsSerializer,
     NameSerializer,
@@ -53,3 +54,12 @@ class WindViewSet(viewsets.ModelViewSet):
         authentication.TokenAuthentication,
     )
     queryset = Wind.objects.all()
+
+
+class CloudinessViewSet(viewsets.ModelViewSet):
+    serializer_class = CloudinessSerializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = Cloudiness.objects.all()
